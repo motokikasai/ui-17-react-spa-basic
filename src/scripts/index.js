@@ -3,22 +3,26 @@ import "../styles/main.scss";
 import "regenerator-runtime/runtime";
 import React from "react";
 import ReactDOM from "react-dom";
+import Faker from "faker";
 // Import any additional modules you want to include below \/
 
 // \/ All of your javascript should go here \/
 
+let randomName = Faker.name.findName();
+let randomEmail = Faker.internet.email();
+let randomPhone = Faker.phone.phoneNumber();
+
 const header = React.createElement("h1", {}, [
-  React.createElement("span", {}, "My"),
+  React.createElement("span", { style: { color: "orange" } }, "My"),
   React.createElement("span", { style: { color: "hotpink" } }, " awesome"),
-  React.createElement("span", {}, " contact list")
+  React.createElement("span", { style: { color: "green" } }, " contact list")
 ]);
 
-const list = React.createElement("ul", { style: { color: "mistyrose" } }, [
+const list = React.createElement("ul", { style: { color: "#646464" } }, [
   React.createElement("li", {}, [
-    React.createElement("p", {}, "Valentine Torp"),
-    React.createElement("a", { href: "#" }, "PHone: 555-2342"),
-    React.createElement("p", {}, ""),
-    React.createElement("a", {}, "Email: johnny@be.good")
+    React.createElement("h3", {}, randomName),
+    React.createElement("p", {}, randomPhone),
+    React.createElement("p", {}, randomEmail)
   ])
 ]);
 
