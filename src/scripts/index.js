@@ -23,7 +23,19 @@ const list = React.createElement("ul", { style: { color: "#646464" } }, [
     React.createElement("h3", {}, randomName),
     React.createElement("p", {}, randomPhone),
     React.createElement("p", {}, randomEmail)
+  ]),
+  React.createElement("li", {}, [
+    React.createElement("h3", {}, randomName),
+    React.createElement("p", {}, randomPhone),
+    React.createElement("p", {}, randomEmail)
+  ]),
+  React.createElement("li", {}, [
+    React.createElement("h3", {}, randomName),
+    React.createElement("p", {}, randomPhone),
+    React.createElement("p", {}, randomEmail)
   ])
 ]);
+
+// setInterval(() => {}, 1000);
 
 ReactDOM.render([header, list], document.querySelector("#app"));
